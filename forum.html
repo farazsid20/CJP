@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Forum | Cockroach Janata Party</title>
+    <meta name="description" content="Discussion board for youth issues, anonymous feedback, and topic voting on civic priorities." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-badge">CJP</div>
+          <div class="brand-copy">
+            <strong>Cockroach Janata Party</strong>
+            <span>Urban resilience. Youth accountability.</span>
+          </div>
+        </a>
+        <div class="nav-wrap">
+          <button class="menu-toggle" type="button" data-menu-toggle>Menu</button>
+          <nav class="site-nav" data-site-nav>
+            <a href="index.html">Home</a>
+            <a href="youth-issues.html">Youth Issues</a>
+            <a href="corruption-awareness.html">Corruption Awareness</a>
+            <a href="solution-lab.html">Solution Lab</a>
+            <a class="active" href="forum.html">Forum</a>
+            <a href="news.html">News</a>
+            <a href="about.html">About</a>
+            <a href="admin.html">Admin</a>
+          </nav>
+        </div>
+        <div class="header-actions">
+          <span class="status-pill" data-user-state>Guest mode</span>
+          <button class="theme-toggle" type="button" data-theme-toggle><span data-theme-label>Light Mode</span></button>
+          <button class="auth-btn" type="button" data-open-auth data-auth-btn>Login / Signup</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero-grid">
+          <div class="hero-panel">
+            <span class="eyebrow">Public Discussion</span>
+            <h1>Community Forum</h1>
+            <p>Discussion board, anonymous feedback, aur topic voting ke through youth concerns ko public conversation mein convert kijiye.</p>
+          </div>
+          <div class="hero-panel">
+            <span class="eyebrow">Forum Norm</span>
+            <h2>Constructive, Specific, Actionable</h2>
+            <p>Yahan rant se zyada grounded observation aur useful ideas ko push kiya jata hai.</p>
+          </div>
+        </section>
+
+        <section class="forum-layout">
+          <div class="forum-card">
+            <span class="eyebrow">Start A Thread</span>
+            <h2>Post Your View</h2>
+            <form data-forum-form>
+              <label>
+                <span>Topic</span>
+                <select name="topic" required>
+                  <option value="Education">Education</option>
+                  <option value="Employment">Employment</option>
+                  <option value="Mental Health">Mental Health</option>
+                  <option value="Governance">Governance</option>
+                  <option value="Digital Safety">Digital Safety</option>
+                </select>
+              </label>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Anonymous allowed" />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" placeholder="Share issue, observation, or idea" required></textarea>
+              </label>
+              <button class="primary-btn" type="submit">Post Discussion</button>
+            </form>
+            <div class="notice hidden" data-notice></div>
+          </div>
+
+          <div class="forum-card">
+            <span class="eyebrow">Live Board</span>
+            <h2>Topic Voting Feed</h2>
+            <div class="feed-list" data-forum-feed></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand-copy">
+            <strong>Cockroach Janata Party</strong>
+            <span>Awareness, accountability aur youth participation ko strengthen karna.</span>
+          </div>
+          <p class="tiny">Cockroach Janata Party © 2026</p>
+          <p class="tiny">Developed By Ahmad Faraz Siddiqui</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="solution-lab.html">Solution Lab</a>
+            <a href="news.html">Awareness news</a>
+          </div>
+        </div>
+        <div>
+          <h3>Tagline</h3>
+          <p>Awareness se badlav.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" data-auth-modal>
+      <div class="modal-card">
+        <div class="modal-head">
+          <div><span class="eyebrow">Join CJP</span><h3>Login / Signup</h3></div>
+          <button class="close-btn" type="button" data-close-modal>×</button>
+        </div>
+        <form data-auth-form>
+          <label><span>Name</span><input type="text" name="name" required /></label>
+          <label><span>Email</span><input type="email" name="email" required /></label>
+          <button class="primary-btn" type="submit">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" data-report-modal>
+      <div class="modal-card">
+        <div class="modal-head">
+          <div><span class="eyebrow">Report</span><h3>Report an Issue</h3></div>
+          <button class="close-btn" type="button" data-close-modal>×</button>
+        </div>
+        <form data-report-form>
+          <label><span>Issue title</span><input type="text" name="title" required /></label>
+          <label><span>Area</span><select name="area"><option>Education</option><option>Employment</option><option>Mental Health</option><option>Governance</option></select></label>
+          <label><span>Detail</span><textarea name="detail" required></textarea></label>
+          <button class="primary-btn" type="submit">Submit Report</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
